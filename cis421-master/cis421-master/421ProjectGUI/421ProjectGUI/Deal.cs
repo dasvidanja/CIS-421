@@ -90,6 +90,8 @@ namespace _421ProjectGUI
                 }
                 else
                 {
+                    connection.Execute($@" DELETE FROM [Sell] WHERE [Id] = '{SellGridView["Id", e.RowIndex].Value}'");
+                    connection.Execute($@"DELETE FROM [Deal] WHERE[Id] = '{SellGridView["Id", e.RowIndex].Value}'");
                     return;
                 }
 
@@ -115,6 +117,8 @@ namespace _421ProjectGUI
                 }
                 else
                 {
+                    connection.Execute($@" DELETE FROM [Rent] WHERE [Id] = '{RentGridView["Id", e.RowIndex].Value}'");
+                    connection.Execute($@"DELETE FROM [Deal] WHERE[Id] = '{RentGridView["Id", e.RowIndex].Value}'");
                     return;
                 }
 
@@ -140,6 +144,8 @@ namespace _421ProjectGUI
                 }
                 else
                 {
+                    connection.Execute($@" DELETE FROM [Lease] WHERE [Id] = '{LeaseGridView["Id", e.RowIndex].Value}'");
+                    connection.Execute($@"DELETE FROM [Lease] WHERE[Id] = '{LeaseGridView["Id", e.RowIndex].Value}'");
                     return;
                 }
 

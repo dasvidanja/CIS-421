@@ -31,8 +31,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.GetCurrentCustomer = new System.Windows.Forms.Button();
-            this.DeleteCustomer = new System.Windows.Forms.Button();
-            this.UpdateCustomer = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,33 +64,11 @@
             this.GetCurrentCustomer.UseVisualStyleBackColor = true;
             this.GetCurrentCustomer.Click += new System.EventHandler(this.GetCurrentCustomer_Click);
             // 
-            // DeleteCustomer
-            // 
-            this.DeleteCustomer.Location = new System.Drawing.Point(285, 14);
-            this.DeleteCustomer.Name = "DeleteCustomer";
-            this.DeleteCustomer.Size = new System.Drawing.Size(106, 23);
-            this.DeleteCustomer.TabIndex = 3;
-            this.DeleteCustomer.Text = "DeleteCustomer";
-            this.DeleteCustomer.UseVisualStyleBackColor = true;
-            this.DeleteCustomer.Click += new System.EventHandler(this.DeleteCustomer_Click);
-            // 
-            // UpdateCustomer
-            // 
-            this.UpdateCustomer.Location = new System.Drawing.Point(415, 14);
-            this.UpdateCustomer.Name = "UpdateCustomer";
-            this.UpdateCustomer.Size = new System.Drawing.Size(99, 23);
-            this.UpdateCustomer.TabIndex = 4;
-            this.UpdateCustomer.Text = "UpdateCustomer";
-            this.UpdateCustomer.UseVisualStyleBackColor = true;
-            this.UpdateCustomer.Click += new System.EventHandler(this.UpdateCustomer_Click);
-            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 379);
-            this.Controls.Add(this.UpdateCustomer);
-            this.Controls.Add(this.DeleteCustomer);
             this.Controls.Add(this.GetCurrentCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -110,7 +86,5 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GetCurrentCustomer;
-        private System.Windows.Forms.Button DeleteCustomer;
-        private System.Windows.Forms.Button UpdateCustomer;
     }
 }

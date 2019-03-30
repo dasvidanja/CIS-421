@@ -100,9 +100,9 @@ namespace _421ProjectGUI
             this.Sells.AutoSize = true;
             this.Sells.Location = new System.Drawing.Point(13, 251);
             this.Sells.Name = "Sells";
-            this.Sells.Size = new System.Drawing.Size(29, 13);
+            this.Sells.Size = new System.Drawing.Size(33, 13);
             this.Sells.TabIndex = 8;
-            this.Sells.Text = "Sells";
+            this.Sells.Text = "Sales";
             // 
             // Deal
             // 

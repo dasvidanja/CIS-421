@@ -10,15 +10,15 @@ namespace _421ProjectGUI.Person
     {
         public string Id { set; get; }
         public string Name { set; get; }
-        public string Phone { set; get; }
+        public string Phone_Number { set; get; }
 
     }
 
     public class Customer : People {
 
-        public string BillinInfo { set; get; }
-        public string License { set; get; }
-        public string Insurance { set; get; }
+        public string Billing_Info { set; get; }
+        public string License_Number { set; get; }
+        public string Insurance_Number { set; get; }
 
     }
 }

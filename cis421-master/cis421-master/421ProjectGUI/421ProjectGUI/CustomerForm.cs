@@ -24,16 +24,14 @@ namespace _421ProjectGUI
         //GET LIST OF CURRENT CUSTOMERS
         private void GetCurrentCustomer_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-
             var conString = ConfigurationManager.ConnectionStrings["DefaultContext"].ConnectionString;
 
             using (SqlConnection connection = new SqlConnection(conString))
             {
 
-                var cust = connection.Query<Customer>(@"SELECT *
+                var cust = connection.Query<Customer>(@"SELECT [p].[Id], [Name], [Phone_Number], [Billing_Info], [License_Number], [Insurance_Number]
                                                    FROM [dbo].[Person] AS p
-                                                   JOIN Customer AS c on p.[Id] = c.[Id]").ToList();
+                                                   INNER JOIN Customer AS c on c.[Id] = p.[Id]").ToList();
 
                 dataGridView1.DataSource = cust;
 
@@ -104,7 +102,23 @@ namespace _421ProjectGUI
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 var colName = dataGridView1.Columns[e.ColumnIndex].Name;
+
                 var tableName = "";
+
+
+                if (colName == "Billing_Info" || colName == "License_Number" || colName == "Insurance_Number")
+                {
+                    tableName = "Customer";
+                }
+                else if(colName ==  "Name" || colName == "Phone_Number")
+                {
+                    tableName = "Person";
+                }
+                else
+                {
+                    return;
+                }
+
                 connection.Execute($@"UPDATE [{tableName}] 
                                     SET [{colName}] 
                                     = '{dataGridView1[e.ColumnIndex, e.RowIndex].Value}'
