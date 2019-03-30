@@ -79,12 +79,12 @@ namespace _421ProjectGUI
             using (SqlConnection connection = new SqlConnection(conString))
             {
                 //Create first a Person
-                var per = connection.Query<People>(@"INSERT INTO [dbo].[Person]
-                                                    VALUES(00001, John Wick, 586 563 9999)").ToList();
+                //var per = connection.Query<People>(@"INSERT INTO [dbo].[Person]
+                //                                    VALUES(00001, 'John Wick', 5865639999)").ToList();
 
                 //Create Customer (which is a person with id 00001
                 var cust = connection.Query<Customer>(@"INSERT INTO [dbo].[Customer]
-                                                   VALUES ($100, 00001, L100200300,I9876)").ToList();
+                                                   VALUES (100, '1', 'L100200300','I9876')").ToList();
 
                 dataGridView1.DataSource = cust;
                 
