@@ -12,8 +12,6 @@ namespace _421ProjectGUI.Person
         public string Name { set; get; }
         public string Phone { set; get; }
 
-        //Maybe this is wrong  
-        public string Address { set; get; }
     }
 
     public class Customer : People {
