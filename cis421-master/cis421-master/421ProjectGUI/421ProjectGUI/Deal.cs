@@ -152,5 +152,10 @@ namespace _421ProjectGUI
                 connection.Execute($@"UPDATE [{tableName}] SET [{colName}] = {LeaseGridView[e.ColumnIndex, e.RowIndex].Value} WHERE [Id] = '{LeaseGridView["Id", e.RowIndex].Value}'");
             }
         }
+
+        private void GoBack_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

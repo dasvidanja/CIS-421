@@ -15,33 +15,43 @@ namespace _421ProjectGUI
 {
      public partial class Menu : Form
      {
-          public Menu()
+
+      
+        public Menu()
           {
-               InitializeComponent();
+          InitializeComponent();
+           
           }
 
           private void DealsTable_Click(object sender, EventArgs e)
           {
-               Deal form2 = new Deal();
-               form2.Show();
+            this.Hide();
+            Deal form2 = new Deal();
 
-               this.Hide();
-          }
+            form2.ShowDialog();
+            this.Show();
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            vehicle form3 = new vehicle();
-            form3.Show();
             this.Hide();
+            vehicle form3 = new vehicle();
+
+            form3.ShowDialog();
+            this.Show();
 
         }
 
         private void People_Button(object sender, EventArgs e)
         {
-            //create customer class
-            CustomerForm customer = new CustomerForm();
-            customer.Show();
             this.Hide();
-        }   
+            //create customer class
+
+            CustomerForm customer = new CustomerForm();
+            customer.ShowDialog();
+            this.Show();
+        }
+
+      
     }
 }

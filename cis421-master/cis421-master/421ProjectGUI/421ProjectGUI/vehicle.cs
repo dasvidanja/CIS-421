@@ -104,8 +104,9 @@ namespace _421ProjectGUI
 
         }
 
-   
-
-        
+        private void GoBack_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+        }
     }
 }

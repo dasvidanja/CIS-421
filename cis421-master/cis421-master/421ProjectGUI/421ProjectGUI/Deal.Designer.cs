@@ -38,6 +38,7 @@ namespace _421ProjectGUI
             this.Lease = new System.Windows.Forms.Label();
             this.Rent = new System.Windows.Forms.Label();
             this.Sells = new System.Windows.Forms.Label();
+            this.GoBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.LeaseGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RentGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SellGridView)).BeginInit();
@@ -104,11 +105,22 @@ namespace _421ProjectGUI
             this.Sells.TabIndex = 8;
             this.Sells.Text = "Sales";
             // 
+            // GoBack
+            // 
+            this.GoBack.Location = new System.Drawing.Point(375, 24);
+            this.GoBack.Name = "GoBack";
+            this.GoBack.Size = new System.Drawing.Size(142, 24);
+            this.GoBack.TabIndex = 9;
+            this.GoBack.Text = "Go Back";
+            this.GoBack.UseVisualStyleBackColor = true;
+            this.GoBack.Click += new System.EventHandler(this.GoBack_Click);
+            // 
             // Deal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1399, 583);
+            this.ClientSize = new System.Drawing.Size(1370, 583);
+            this.Controls.Add(this.GoBack);
             this.Controls.Add(this.Sells);
             this.Controls.Add(this.Rent);
             this.Controls.Add(this.Lease);
@@ -137,5 +149,6 @@ namespace _421ProjectGUI
         private Label Lease;
         private Label Rent;
         private Label Sells;
+        private Button GoBack;
     }
 }

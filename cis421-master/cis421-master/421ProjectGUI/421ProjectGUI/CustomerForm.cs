@@ -16,9 +16,11 @@ namespace _421ProjectGUI
 {
     public partial class CustomerForm : Form
     {
+       
         public CustomerForm()
         {
             InitializeComponent();
+        
         }
 
         //GET LIST OF CURRENT CUSTOMERS
@@ -129,6 +131,12 @@ namespace _421ProjectGUI
 
         private void CustomerForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void GoBack_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
 
         }
     }

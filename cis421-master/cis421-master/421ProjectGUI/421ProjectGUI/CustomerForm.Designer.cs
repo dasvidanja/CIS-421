@@ -31,6 +31,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.GetCurrentCustomer = new System.Windows.Forms.Button();
+            this.GoBack = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -64,11 +65,23 @@
             this.GetCurrentCustomer.UseVisualStyleBackColor = true;
             this.GetCurrentCustomer.Click += new System.EventHandler(this.GetCurrentCustomer_Click);
             // 
+            // GoBack
+            // 
+            this.GoBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoBack.Location = new System.Drawing.Point(634, 329);
+            this.GoBack.Name = "GoBack";
+            this.GoBack.Size = new System.Drawing.Size(75, 23);
+            this.GoBack.TabIndex = 3;
+            this.GoBack.Text = "Go Back";
+            this.GoBack.UseVisualStyleBackColor = true;
+            this.GoBack.Click += new System.EventHandler(this.GoBack_Click);
+            // 
             // CustomerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(788, 379);
+            this.Controls.Add(this.GoBack);
             this.Controls.Add(this.GetCurrentCustomer);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -86,5 +99,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button GetCurrentCustomer;
+        private System.Windows.Forms.Button GoBack;
     }
 }

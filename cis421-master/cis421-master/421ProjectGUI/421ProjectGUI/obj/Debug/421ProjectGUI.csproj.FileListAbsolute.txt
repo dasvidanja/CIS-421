@@ -84,3 +84,17 @@ C:\Code\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\o
 C:\Code\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.csproj.CopyComplete
 C:\Code\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.exe
 C:\Code\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.pdb
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\bin\Debug\421ProjectGUI.exe.config
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.exe
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.pdb
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\bin\Debug\421ProjectGUI.exe
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\bin\Debug\421ProjectGUI.pdb
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\bin\Debug\Dapper.dll
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\bin\Debug\Dapper.xml
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.CustomerForm.resources
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.Deal.resources
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.Menu.resources
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.Properties.Resources.resources
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.vehicle.resources
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.csproj.GenerateResource.Cache
+C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.csprojResolveAssemblyReference.cache
