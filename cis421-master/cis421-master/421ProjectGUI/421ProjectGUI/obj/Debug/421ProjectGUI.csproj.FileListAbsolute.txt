@@ -98,3 +98,5 @@ C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI
 C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.vehicle.resources
 C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.csproj.GenerateResource.Cache
 C:\Users\user\Documents\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\421ProjectGUI.csprojResolveAssemblyReference.cache
+C:\Code\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.AddCar.resources
+C:\Code\GitHub\CIS-421\cis421-master\cis421-master\421ProjectGUI\421ProjectGUI\obj\Debug\_421ProjectGUI.AddTruck.resources

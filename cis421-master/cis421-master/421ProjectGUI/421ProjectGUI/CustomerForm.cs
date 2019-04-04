@@ -32,7 +32,7 @@ namespace _421ProjectGUI
             {
 
                 var cust = connection.Query<Customer>(@"SELECT [p].[Id], [Name], [Phone_Number], [Billing_Info], [License_Number], [Insurance_Number]
-                                                   FROM [dbo].[Person] AS p
+                FROM[dbo].[Person] AS p
                                                    INNER JOIN Customer AS c on c.[Id] = p.[Id]").ToList();
 
                 dataGridView1.DataSource = cust;

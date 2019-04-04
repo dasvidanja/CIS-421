@@ -19,7 +19,7 @@ namespace _421ProjectGUI
       
         public Menu()
           {
-          InitializeComponent();
+            InitializeComponent();
            
           }
 
@@ -30,7 +30,7 @@ namespace _421ProjectGUI
 
             form2.ShowDialog();
             this.Show();
-        }
+          }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,7 +51,5 @@ namespace _421ProjectGUI
             customer.ShowDialog();
             this.Show();
         }
-
-      
     }
 }
