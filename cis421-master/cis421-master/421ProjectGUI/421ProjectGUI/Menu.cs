@@ -17,11 +17,11 @@ namespace _421ProjectGUI
      {
 
       
-        public Menu()
-          {
+         public Menu()
+         {
             InitializeComponent();
            
-          }
+         }
 
           private void DealsTable_Click(object sender, EventArgs e)
           {
@@ -51,5 +51,13 @@ namespace _421ProjectGUI
             customer.ShowDialog();
             this.Show();
         }
-    }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            EmployeeForm employeeForm = new EmployeeForm();
+            employeeForm.ShowDialog();
+            this.Show();
+            this.Hide();
+        }
+     }
 }

@@ -21,4 +21,21 @@ namespace _421ProjectGUI.Person
         public string Insurance_Number { set; get; }
 
     }
+
+    public class Employee : People
+    {
+        public string Employee_Discount { set; get; }
+        public string Salary { set; get; }
+    }
+
+    public class Manager : Employee
+    {
+        public string Clearance_Level { set; get; }
+    }
+
+    public class SalesPerson : Employee
+    {
+        public string Magers_Id { get; set; }
+        public string Yearly_Sales { get; set; }
+    }
 }

@@ -23,7 +23,6 @@ namespace _421ProjectGUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-
             var conString = ConfigurationManager.ConnectionStrings["DefaultContext"].ConnectionString;
             using (SqlConnection connection = new SqlConnection(conString))
             {
