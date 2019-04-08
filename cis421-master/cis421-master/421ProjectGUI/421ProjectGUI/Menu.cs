@@ -56,7 +56,6 @@ namespace _421ProjectGUI
         {
             EmployeeForm employeeForm = new EmployeeForm();
             employeeForm.ShowDialog();
-            this.Show();
             this.Hide();
         }
      }

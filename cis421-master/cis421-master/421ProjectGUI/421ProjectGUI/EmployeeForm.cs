@@ -39,7 +39,6 @@ namespace _421ProjectGUI
         {
             Menu menu = new Menu();
             menu.ShowDialog();
-            this.Show();
             this.Hide();
 
         }

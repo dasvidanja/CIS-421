@@ -12,7 +12,6 @@ namespace _421ProjectGUI.Model
         public string Price { get; set; }
         public string Commission { get; set; }
         public string Id { get; set; }
-        public string Type { get; set; }
         public string Color { get; set; }
         public string Condition { get; set; }
         public string Mileage { get; set; }

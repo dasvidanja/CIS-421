@@ -27,7 +27,7 @@ namespace _421ProjectGUI
             using (SqlConnection connection = new SqlConnection(conString))
             {
 
-                var rents = connection.Query<RentModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, r.[Hours], r.[Days], ca.[Type], v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info, c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
+                var rents = connection.Query<RentModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, r.[Hours], r.[Days], v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info, c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
                                                                 from deal as d
                                                                 inner join rent as r on r.Id = d.Id
                                                                 inner join Customer as c on c.Id = d.Customer_Id
@@ -36,7 +36,16 @@ namespace _421ProjectGUI
                                                                 inner join Vehicle as v on v.Vin_Number = Vehicle_Vin_Number
                                                                 inner join Car as ca on ca.Vin_Number = Vehicle_Vin_Number").ToList();
 
-                var leases = connection.Query<LeaseModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, l.Contract_Number as Contract, l.End_Date, l.Miles, ca.[Type], v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info,  c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
+                rents.AddRange(connection.Query<RentModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, r.[Hours], r.[Days], v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info, c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
+                                                                from deal as d
+                                                                inner join rent as r on r.Id = d.Id
+                                                                inner join Customer as c on c.Id = d.Customer_Id
+                                                                inner join person as p on p.id = c.Id
+                                                                inner join person as p1 on p1.id = d.Sales_Person_Id
+                                                                inner join Vehicle as v on v.Vin_Number = Vehicle_Vin_Number
+                                                                inner join Truck as t on t.Vin_Number = Vehicle_Vin_Number").ToList());
+
+                var leases = connection.Query<LeaseModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, l.Contract_Number as Contract, l.End_Date, l.Miles, v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info,  c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
                                                                 from deal as d
                                                                 inner join Lease as l on l.Id = d.Id
                                                                 inner join Customer as c on c.Id = d.Customer_Id
@@ -45,14 +54,33 @@ namespace _421ProjectGUI
                                                                 inner join Vehicle as v on v.Vin_Number = Vehicle_Vin_Number
                                                                 inner join Car as ca on ca.Vin_Number = Vehicle_Vin_Number").ToList();
 
-                var sells = connection.Query<SellModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, s.Title , ca.[Type], v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info,  c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
+                leases.AddRange(connection.Query<LeaseModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, l.Contract_Number as Contract, l.End_Date, l.Miles, v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info,  c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
+                                                                from deal as d
+                                                                inner join Lease as l on l.Id = d.Id
+                                                                inner join Customer as c on c.Id = d.Customer_Id
+                                                                inner join person as p on p.id = c.Id
+                                                                inner join person as p1 on p1.id = d.Sales_Person_Id
+                                                                inner join Vehicle as v on v.Vin_Number = Vehicle_Vin_Number
+                                                                inner join Truck as t on t.Vin_Number = Vehicle_Vin_Number").ToList());
+
+                var sells = connection.Query<SellModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, s.Title, v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info,  c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
                                                                 from deal as d
                                                                 inner join Sell as s on s.Id = d.Id
                                                                 inner join Customer as c on c.Id = d.Customer_Id
                                                                 inner join person as p on p.id = c.Id
                                                                 inner join person as p1 on p1.id = d.Sales_Person_Id
                                                                 inner join Vehicle as v on v.Vin_Number = Vehicle_Vin_Number
-                                                                inner join Car as ca on ca.Vin_Number = Vehicle_Vin_Number").ToList();
+                                                                inner join Car as ca on ca.Vin_Number = Vehicle_Vin_Number
+                                                                inner join Truck as t on t.Vin_Number = Vehicle_Vin_Number").ToList();
+
+                sells.AddRange(connection.Query<SellModel>(@"select d.[Id], d.[Date], d.Price, d.Commission, s.Title, v.Color, v.Condition, v.Mileage, v.Model, v.Power_Source, v.[Year], p.[Name] as Cname, p.Phone_Number as Cphone, c.Billing_Info,  c.Insurance_Number as Insurance, c.License_Number as License, p1.[Name] as Sname, p1.Phone_Number as Sphone 
+                                                                from deal as d
+                                                                inner join Sell as s on s.Id = d.Id
+                                                                inner join Customer as c on c.Id = d.Customer_Id
+                                                                inner join person as p on p.id = c.Id
+                                                                inner join person as p1 on p1.id = d.Sales_Person_Id
+                                                                inner join Vehicle as v on v.Vin_Number = Vehicle_Vin_Number
+                                                                inner join Truck as t on t.Vin_Number = Vehicle_Vin_Number").ToList());
 
                 LeaseGridView.DataSource = leases;
                 RentGridView.DataSource = rents;
@@ -145,7 +173,7 @@ namespace _421ProjectGUI
                 else
                 {
                     connection.Execute($@" DELETE FROM [Lease] WHERE [Id] = '{LeaseGridView["Id", e.RowIndex].Value}'");
-                    connection.Execute($@"DELETE FROM [Lease] WHERE[Id] = '{LeaseGridView["Id", e.RowIndex].Value}'");
+                    connection.Execute($@"DELETE FROM [Deal] WHERE[Id] = '{LeaseGridView["Id", e.RowIndex].Value}'");
                     return;
                 }
 

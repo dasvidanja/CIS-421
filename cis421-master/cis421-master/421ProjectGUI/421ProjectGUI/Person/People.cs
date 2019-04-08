@@ -35,7 +35,7 @@ namespace _421ProjectGUI.Person
 
     public class SalesPerson : Employee
     {
-        public string Magers_Id { get; set; }
+        public string Managers_Id { get; set; }
         public string Yearly_Sales { get; set; }
     }
 }
